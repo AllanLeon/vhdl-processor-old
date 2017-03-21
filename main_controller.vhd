@@ -203,22 +203,22 @@ begin
 											  addr_bus);
 	-- demux?
 
-	cu: control_unit port map(clk, psw_out(3), ir_out, psw_out, cb_pc, cb_ir, cb_mar, cb_mbr, cb_acc, cb_ram, cb_regs, cb_alua, cb_alub, cb_alu, cb_out, cb_psw_cu);
-	ram: memory port map(cb_ram(0), psw_out(3), cb_ram(1), '0', addr_bus, data_bus, ram_out);
-	reg_mem: memory port map(cb_regs(0), psw_out(3), cb_regs(1), '0', addr_bus, data_bus, regs_out);
-	mar: common_register port map(cb_mar(1), psw_out(3), addr_bus, mar_out);
-	mbr: common_register port map(cb_mbr(1), psw_out(3), data_bus, mbr_out);
-	ir: instruction_register port map(cb_ir(0), psw_out(3), cb_ir(1), cb_ir(2 to 3), data_bus, ir_out);
-	pc: program_counter port map(cb_pc(0), psw_out(3), cb_pc(1), cb_pc(2), addr_bus, pc_out);
+	cu: control_unit port map(clk, rst, ir_out, psw_out, cb_pc, cb_ir, cb_mar, cb_mbr, cb_acc, cb_ram, cb_regs, cb_alua, cb_alub, cb_alu, cb_out, cb_psw_cu);
+	ram: memory port map(cb_ram(0), rst, cb_ram(1), '0', addr_bus, data_bus, ram_out);
+	reg_mem: memory port map(cb_regs(0), rst, cb_regs(1), '0', addr_bus, data_bus, regs_out);
+	mar: common_register port map(cb_mar(1), rst, addr_bus, mar_out);
+	mbr: common_register port map(cb_mbr(1), rst, data_bus, mbr_out);
+	ir: instruction_register port map(cb_ir(0), rst, cb_ir(1), cb_ir(2 to 3), data_bus, ir_out);
+	pc: program_counter port map(cb_pc(0), rst, cb_pc(1), cb_pc(2), addr_bus, pc_out);
 	
-	alu_a: common_register port map(cb_alua(1), psw_out(3), data_bus, alua_out);
-	alu_b: common_register port map(cb_alub(1), psw_out(3), data_bus, alub_out);
-	alu: arithmetic_logic_unit port map(cb_alu(0), psw_out(3), cb_alu(1 to 3), alua_out, alub_out, alu_out, cb_psw_alu);
+	alu_a: common_register port map(cb_alua(1), rst, data_bus, alua_out);
+	alu_b: common_register port map(cb_alub(1), rst, data_bus, alub_out);
+	alu: arithmetic_logic_unit port map(cb_alu(0), rst, cb_alu(1 to 3), alua_out, alub_out, alu_out, cb_psw_alu);
 	
-	output: common_register port map(cb_out(1), psw_out(3), data_bus, output_out);
+	output: common_register port map(cb_out(1), rst, data_bus, output_out);
 	
 												--missing enable from alu
-	psw: program_status_word port map(cb_psw_cu(0), psw_out(3), cb_psw_alu(0), cb_psw_alu(1), cb_psw_alu(2), cb_psw_cu(1), cb_psw_cu(2), psw_out);
+	psw: program_status_word port map(cb_psw_cu(0), rst, cb_psw_alu(0), cb_psw_alu(1), cb_psw_alu(2), cb_psw_cu(1), cb_psw_cu(2), psw_out);
 	
 	--acc: accumulator port map(cb_acc(0), rst, cb_acc(1), data_bus, acc_out);
 

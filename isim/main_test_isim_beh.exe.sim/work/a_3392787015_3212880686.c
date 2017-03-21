@@ -265,7 +265,7 @@ LAB34:    t5 = (t0 + 3952);
     t10 = *((char **)t9);
     memcpy(t10, t1, 8U);
     xsi_driver_first_trans_delta(t5, 912U, 8U, 0LL);
-    xsi_set_current_line(76, ng0);
+    xsi_set_current_line(73, ng0);
     t1 = (t0 + 9224);
     t3 = (8U != 8U);
     if (t3 == 1)
@@ -278,7 +278,7 @@ LAB36:    t5 = (t0 + 3952);
     t10 = *((char **)t9);
     memcpy(t10, t1, 8U);
     xsi_driver_first_trans_delta(t5, 920U, 8U, 0LL);
-    xsi_set_current_line(77, ng0);
+    xsi_set_current_line(74, ng0);
     t1 = (t0 + 9232);
     t3 = (8U != 8U);
     if (t3 == 1)
@@ -291,7 +291,7 @@ LAB38:    t5 = (t0 + 3952);
     t10 = *((char **)t9);
     memcpy(t10, t1, 8U);
     xsi_driver_first_trans_delta(t5, 928U, 8U, 0LL);
-    xsi_set_current_line(78, ng0);
+    xsi_set_current_line(75, ng0);
     t1 = (t0 + 9240);
     t3 = (8U != 8U);
     if (t3 == 1)

@@ -31,8 +31,9 @@ Compiling architecture behavioral of entity program_status_word [program_status_
 Compiling architecture behavioral of entity main_controller [main_controller_default]
 Compiling architecture behavior of entity main_test
 Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
 WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\main_test_isim_beh.exe.sim\libPortability.dll".
 Compiled 24 VHDL Units
 Built simulation executable D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/main_test_isim_beh.exe
-Fuse Memory Usage: 35536 KB
-Fuse CPU Usage: 749 ms
+Fuse Memory Usage: 35608 KB
+Fuse CPU Usage: 827 ms

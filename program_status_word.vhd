@@ -43,12 +43,13 @@ end program_status_word;
 architecture Behavioral of program_status_word is
 
 begin
-	process (clk, rst, c, z, o, r, h)
+	--process (clk, rst, c, z, o, r, h)
+	process (rst, c, z, o, r, h)
 	begin
 		if (rst = '1') then
 			psw <= "00000";
-		--else
-		elsif (clk = '1') then
+		else
+		--elsif (clk = '1') then
 			psw(0) <= c;
 			psw(1) <= z;
 			psw(2) <= o;

@@ -59,6 +59,8 @@ type state is (fetch_ins_1, fetch_ins_2, fetch_ins_3, fetch_ins_4, fetch_ins_5, 
 					add_mem_1, add_mem_2, add_mem_3, add_mem_4, add_mem_5, add_mem_6, add_mem_7, add_mem_8,
 					and_reg_1, and_reg_2, and_reg_3, and_reg_4, and_reg_5, and_reg_6, and_reg_7, and_reg_8,
 					and_mem_1, and_mem_2, and_mem_3, and_mem_4, and_mem_5, and_mem_6, and_mem_7, and_mem_8,
+					cmp_reg_1, cmp_reg_2, cmp_reg_3, cmp_reg_4, cmp_reg_5, cmp_reg_6,
+					cmp_mem_1, cmp_mem_2, cmp_mem_3, cmp_mem_4, cmp_mem_5, cmp_mem_6,
 					not_1, not_2, not_3, not_4, not_5,
 					stop, reset);
 signal current_state, next_state: state;
@@ -206,6 +208,10 @@ begin
 						next_state <= and_reg_1;
 					when "010100" => -- AND to memory
 						next_state <= and_mem_1;
+					when "010110" => -- COMPARE from register
+						next_state <= cmp_reg_1;
+					when "010111" => -- COMPARE from memory
+						next_state <= cmp_mem_1;
 					
 					when others =>
 						next_state <= fetch_ins_1;
@@ -950,8 +956,197 @@ begin
 
 
 
+
+-------------------------------------- CMP FROM REG -----------------------------------------
+			when cmp_reg_1 =>
+				case inst(17 downto 16) is
+					when "00" =>
+						--opr(0) <= '1';
+						--opr(1) <= '1';
+						alub(0) <= '1';
+						alub(1) <= '1';
+						
+						ir(0) <= '1';
+						ir(1) <= '0';
+						ir(2 to 3) <= "10";
+						ir(4) <= '0';
+						
+						next_state <= cmp_reg_3;
+					when "01" =>
+						ir(0) <= '1';
+						ir(1) <= '0';
+						ir(2 to 3) <= "10";
+						ir(4) <= '1';
+				
+						mar(0) <= '1';
+						mar(1) <= '1';
+						
+						next_state <= cmp_reg_2;
+					when "10" =>
+						ir(0) <= '1';
+						ir(1) <= '0';
+						ir(2 to 3) <= "10";
+						ir(4) <= '1';
+				
+						mar(0) <= '1';
+						mar(1) <= '1';
+						
+						next_state <= cmp_reg_2;
+					when others =>
+						next_state <= fetch_ins_1;
+				end case;
+			when cmp_reg_2 =>
+				case inst(17 downto 16) is
+					when "01" =>
+						alub(0) <= '1';
+						alub(1) <= '1';
+						
+						regs(0) <= '1';
+						regs(1) <= '0';
+						
+						next_state <= cmp_reg_3;
+					when "10" =>
+						alub(0) <= '1';
+						alub(1) <= '1';
+						
+						ram(0) <= '1';
+						ram(1) <= '0';
+						
+						next_state <= cmp_reg_3;
+					when others =>
+						next_state <= fetch_ins_1;
+				end case;
+			when cmp_reg_3 =>
+				ir(0) <= '1';
+				ir(1) <= '0';
+				ir(2 to 3) <= "01";
+				ir(4) <= '1';
+		
+				mar(0) <= '1';
+				mar(1) <= '1';
+				next_state <= cmp_reg_4;
+			when cmp_reg_4 =>
+				mbr(0) <= '1';
+				mbr(1) <= '1';
+				
+				regs(0) <= '1';
+				regs(1) <= '0';
+				
+				next_state <= cmp_reg_5;
+			when cmp_reg_5 =>
+				alua(0) <= '1';
+				alua(1) <= '1';
+				
+				mbr(0) <= '1';
+				mbr(1) <= '0';
+				
+				next_state <= cmp_reg_6;
+			when cmp_reg_6 =>
+				alu <= "1111";
+				
+				next_state <= fetch_ins_1;
+				
+				
+				
+				
+				
+				
+-------------------------------------- CMP FROM MEM -----------------------------------------
+			when cmp_mem_1 =>
+				case inst(17 downto 16) is
+					when "00" =>
+						--opr(0) <= '1';
+						--opr(1) <= '1';
+						alub(0) <= '1';
+						alub(1) <= '1';
+						
+						ir(0) <= '1';
+						ir(1) <= '0';
+						ir(2 to 3) <= "10";
+						ir(4) <= '0';
+						
+						next_state <= cmp_mem_3;
+					when "01" =>
+						ir(0) <= '1';
+						ir(1) <= '0';
+						ir(2 to 3) <= "10";
+						ir(4) <= '1';
+				
+						mar(0) <= '1';
+						mar(1) <= '1';
+						
+						next_state <= cmp_mem_2;
+					when "10" =>
+						ir(0) <= '1';
+						ir(1) <= '0';
+						ir(2 to 3) <= "10";
+						ir(4) <= '1';
+				
+						mar(0) <= '1';
+						mar(1) <= '1';
+						
+						next_state <= cmp_mem_2;
+					when others =>
+						next_state <= fetch_ins_1;
+				end case;
+			when cmp_mem_2 =>
+				case inst(17 downto 16) is
+					when "01" =>
+						alub(0) <= '1';
+						alub(1) <= '1';
+						
+						regs(0) <= '1';
+						regs(1) <= '0';
+						
+						next_state <= cmp_mem_3;
+					when "10" =>
+						alub(0) <= '1';
+						alub(1) <= '1';
+						
+						ram(0) <= '1';
+						ram(1) <= '0';
+						
+						next_state <= cmp_mem_3;
+					when others =>
+						next_state <= fetch_ins_1;
+				end case;
+			when cmp_mem_3 =>
+				ir(0) <= '1';
+				ir(1) <= '0';
+				ir(2 to 3) <= "01";
+				ir(4) <= '1';
+		
+				mar(0) <= '1';
+				mar(1) <= '1';
+				next_state <= cmp_mem_4;
+			when cmp_mem_4 =>
+				mbr(0) <= '1';
+				mbr(1) <= '1';
+				
+				ram(0) <= '1';
+				ram(1) <= '0';
+				
+				next_state <= cmp_mem_5;
+			when cmp_mem_5 =>
+				alua(0) <= '1';
+				alua(1) <= '1';
+				
+				mbr(0) <= '1';
+				mbr(1) <= '0';
+				
+				next_state <= cmp_mem_6;
+			when cmp_mem_6 =>
+				alu <= "1111";
+				
+				next_state <= fetch_ins_1;
+				
+				
+				
+
+
+
 			when reset =>
-				--cb_psw <= "110";
+				cb_psw <= "110";
 				next_state <= fetch_ins_1;
 
 			when stop =>
