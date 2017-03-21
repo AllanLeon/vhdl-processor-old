@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/main_test_isim_beh.exe" -prj "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/main_test_beh.prj" "work.main_test" 

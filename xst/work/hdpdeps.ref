@@ -1,0 +1,73 @@
+V3 39
+FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/arithmetic_logic_unit.vhd" 2017/03/20.23:50:55 P.20131013
+EN work/arithmetic_logic_unit 1490069334 \
+      FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/arithmetic_logic_unit.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/arithmetic_logic_unit/Behavioral 1490069335 \
+      FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/arithmetic_logic_unit.vhd" \
+      EN work/arithmetic_logic_unit 1490069334
+FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/common_register.vhd" 2017/03/19.17:16:27 P.20131013
+EN work/common_register 1490069328 \
+      FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/common_register.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/common_register/Behavioral 1490069329 \
+      FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/common_register.vhd" \
+      EN work/common_register 1490069328
+FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/control_unit.vhd" 2017/03/21.00:08:22 P.20131013
+EN work/control_unit 1490069324 \
+      FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/control_unit.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/control_unit/Behavioral 1490069325 \
+      FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/control_unit.vhd" \
+      EN work/control_unit 1490069324
+FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/instruction_register.vhd" 2017/03/19.23:26:09 P.20131013
+EN work/instruction_register 1490069330 \
+      FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/instruction_register.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/instruction_register/Behavioral 1490069331 \
+      FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/instruction_register.vhd" \
+      EN work/instruction_register 1490069330
+FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/main_controller.vhd" 2017/03/21.00:08:32 P.20131013
+EN work/main_controller 1490069338 \
+      FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/main_controller.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/main_controller/Behavioral 1490069339 \
+      FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/main_controller.vhd" \
+      EN work/main_controller 1490069338 CP mux_data CP mux_addr CP control_unit \
+      CP memory CP common_register CP instruction_register CP program_counter \
+      CP arithmetic_logic_unit CP program_status_word
+FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/memory.vhd" 2017/03/20.20:54:20 P.20131013
+EN work/memory 1490069326 \
+      FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/memory.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/memory/Behavioral 1490069327 \
+      FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/memory.vhd" \
+      EN work/memory 1490069326
+FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/mux_addr.vhd" 2017/03/19.23:38:36 P.20131013
+EN work/mux_addr 1490069322 \
+      FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/mux_addr.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/mux_addr/Behavioral 1490069323 \
+      FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/mux_addr.vhd" \
+      EN work/mux_addr 1490069322
+FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/mux_data.vhd" 2017/03/20.18:05:21 P.20131013
+EN work/mux_data 1490069320 \
+      FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/mux_data.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/mux_data/Behavioral 1490069321 \
+      FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/mux_data.vhd" \
+      EN work/mux_data 1490069320
+FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/program_counter.vhd" 2017/03/19.23:48:03 P.20131013
+EN work/program_counter 1490069332 \
+      FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/program_counter.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/program_counter/Behavioral 1490069333 \
+      FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/program_counter.vhd" \
+      EN work/program_counter 1490069332
+FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/program_status_word.vhd" 2017/03/21.00:01:17 P.20131013
+EN work/program_status_word 1490069336 \
+      FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/program_status_word.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/program_status_word/Behavioral 1490069337 \
+      FL "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/program_status_word.vhd" \
+      EN work/program_status_word 1490069336
