@@ -8,7 +8,43 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/arithmetic_logic_unit.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/common_register.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/control_unit.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/instruction_register.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/main_controller.vhd&quot; into library work</arg>
+</msg>
+
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/memory.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/memory_address_register.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/memory_buffer_register.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/mux_addr.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/mux_data.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/program_counter.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/program_status_word.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/register_memory.vhd&quot; into library work</arg>
 </msg>
 
 </messages>
