@@ -42,7 +42,7 @@ entity mux_data is
 			  s_ir : in STD_LOGIC_VECTOR (0 to 4);
 			  s_alua : in STD_LOGIC_VECTOR (0 to 1);
 			  s_alu : in STD_LOGIC;
-           data_bus : out  STD_LOGIC_VECTOR (7 downto 0));
+           data_bus : out  STD_LOGIC_VECTOR (7 downto 0) := x"00");
 end mux_data;
 
 architecture Behavioral of mux_data is

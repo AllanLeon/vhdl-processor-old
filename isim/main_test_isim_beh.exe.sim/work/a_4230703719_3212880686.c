@@ -76,7 +76,7 @@ LAB3:    t1 = (t0 + 3312);
 
 LAB1:    return;
 LAB2:    xsi_set_current_line(47, ng0);
-    t1 = (t0 + 5697);
+    t1 = (t0 + 5721);
     t6 = (t0 + 3392);
     t7 = (t6 + 56U);
     t8 = *((char **)t7);
@@ -107,17 +107,17 @@ LAB7:    t2 = (t0 + 1032U);
 LAB10:    xsi_set_current_line(51, ng0);
     t2 = (t0 + 1512U);
     t7 = *((char **)t2);
-    t2 = (t0 + 5721);
+    t2 = (t0 + 5745);
     t15 = xsi_mem_cmp(t2, t7, 2U);
     if (t15 == 1)
         goto LAB14;
 
-LAB18:    t9 = (t0 + 5723);
+LAB18:    t9 = (t0 + 5747);
     t16 = xsi_mem_cmp(t9, t7, 2U);
     if (t16 == 1)
         goto LAB15;
 
-LAB19:    t17 = (t0 + 5725);
+LAB19:    t17 = (t0 + 5749);
     t19 = xsi_mem_cmp(t17, t7, 2U);
     if (t19 == 1)
         goto LAB16;

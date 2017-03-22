@@ -35,7 +35,7 @@ entity instruction_register is
 			  rw : in STD_LOGIC;
 			  opn : in STD_LOGIC_VECTOR(0 to 1);
            din : in  STD_LOGIC_VECTOR (7 downto 0);
-           dout : out  STD_LOGIC_VECTOR (23 downto 0));
+           dout : out  STD_LOGIC_VECTOR (23 downto 0) := x"000000");
 end instruction_register;
 
 architecture Behavioral of instruction_register is

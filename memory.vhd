@@ -37,7 +37,7 @@ entity memory is
           t : in  STD_LOGIC;
           addr : in  STD_LOGIC_VECTOR (7 downto 0);
           din : in  STD_LOGIC_VECTOR (7 downto 0);
-          dout : out  STD_LOGIC_VECTOR (7 downto 0));
+          dout : out  STD_LOGIC_VECTOR (7 downto 0) := x"00");
 end memory;
 
 architecture Behavioral of memory is

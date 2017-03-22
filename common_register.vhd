@@ -33,7 +33,7 @@ entity common_register is
 	Port ( clk : in  STD_LOGIC;
            rst : in  STD_LOGIC;
            din : in  STD_LOGIC_VECTOR (7 downto 0);
-           dout : out  STD_LOGIC_VECTOR (7 downto 0));
+           dout : out  STD_LOGIC_VECTOR (7 downto 0) := x"00");
 end common_register;
 
 architecture Behavioral of common_register is

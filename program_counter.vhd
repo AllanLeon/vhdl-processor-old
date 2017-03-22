@@ -37,7 +37,7 @@ entity program_counter is
 			  inc : in STD_LOGIC;
 			  jmp : in STD_LOGIC;
            din : in  STD_LOGIC_VECTOR (7 downto 0);
-           dout : out  STD_LOGIC_VECTOR (7 downto 0));
+           dout : out  STD_LOGIC_VECTOR (7 downto 0) := x"00");
 end program_counter;
 
 architecture Behavioral of program_counter is
@@ -51,7 +51,7 @@ begin
 		variable tmp_add: unsigned (7 downto 0) := x"00";
 	begin
 		if (rst = '1') then
-			counter <= x"64";
+			counter <= base;
 		--elsif (clk'event and clk = '1') then
 		elsif (clk = '1') then
 			if (inc = '1') then				

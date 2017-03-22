@@ -59,7 +59,7 @@ LAB3:    t1 = (t0 + 2992);
 
 LAB1:    return;
 LAB2:    xsi_set_current_line(45, ng0);
-    t1 = (t0 + 5090);
+    t1 = (t0 + 5098);
     t6 = (t0 + 3072);
     t7 = (t6 + 56U);
     t8 = *((char **)t7);

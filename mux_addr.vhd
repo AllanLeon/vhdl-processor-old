@@ -36,7 +36,7 @@ entity mux_addr is
            s_mar : in  STD_LOGIC_VECTOR (0 to 1);
 			  s_pc : in STD_LOGIC_VECTOR (0 to 1);
 			  s_ir : in STD_LOGIC_VECTOR (0 to 4);
-           addr_bus : out  STD_LOGIC_VECTOR (7 downto 0));
+           addr_bus : out  STD_LOGIC_VECTOR (7 downto 0) := x"00");
 end mux_addr;
 
 architecture Behavioral of mux_addr is
