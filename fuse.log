@@ -1,39 +1,19 @@
-Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/main_test_isim_beh.exe" -prj "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/main_test_beh.prj" "work.main_test" 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/io_test_isim_beh.exe" -prj "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/io_test_beh.prj" "work.io_test" 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Parsing VHDL file "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/program_status_word.vhd" into library work
-Parsing VHDL file "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/program_counter.vhd" into library work
-Parsing VHDL file "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/mux_data.vhd" into library work
-Parsing VHDL file "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/mux_addr.vhd" into library work
-Parsing VHDL file "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/memory.vhd" into library work
-Parsing VHDL file "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/instruction_register.vhd" into library work
-Parsing VHDL file "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/control_unit.vhd" into library work
-Parsing VHDL file "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/common_register.vhd" into library work
-Parsing VHDL file "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/arithmetic_logic_unit.vhd" into library work
-Parsing VHDL file "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/main_controller.vhd" into library work
-Parsing VHDL file "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/main_test.vhd" into library work
+Parsing VHDL file "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/io_module.vhd" into library work
+Parsing VHDL file "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/io_test.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
-Compiling package numeric_std
-Compiling architecture behavioral of entity mux_data [mux_data_default]
-Compiling architecture behavioral of entity mux_addr [mux_addr_default]
-Compiling architecture behavioral of entity control_unit [control_unit_default]
-Compiling architecture behavioral of entity memory [memory_default]
-Compiling architecture behavioral of entity common_register [common_register_default]
-Compiling architecture behavioral of entity instruction_register [instruction_register_default]
-Compiling architecture behavioral of entity program_counter [program_counter_default]
-Compiling architecture behavioral of entity arithmetic_logic_unit [arithmetic_logic_unit_default]
-Compiling architecture behavioral of entity program_status_word [program_status_word_default]
-Compiling architecture behavioral of entity main_controller [main_controller_default]
-Compiling architecture behavior of entity main_test
+Compiling architecture behavioral of entity io_module [io_module_default]
+Compiling architecture behavior of entity io_test
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\main_test_isim_beh.exe.sim\libPortability.dll".
-Compiled 24 VHDL Units
-Built simulation executable D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/main_test_isim_beh.exe
-Fuse Memory Usage: 35620 KB
-Fuse CPU Usage: 874 ms
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\io_test_isim_beh.exe.sim\libPortability.dll".
+Compiled 5 VHDL Units
+Built simulation executable D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/io_test_isim_beh.exe
+Fuse Memory Usage: 28680 KB
+Fuse CPU Usage: 484 ms
