@@ -41,7 +41,7 @@ component control_unit is
 			  rst : in STD_LOGIC;
 			  inst : in  STD_LOGIC_VECTOR (23 downto 0);
 			  psw : in STD_LOGIC_VECTOR (0 to 4);
-			  pc : out STD_LOGIC_VECTOR (0 to 2) := "000"; -- (enable, rw, increment)
+			  pc : out STD_LOGIC_VECTOR (0 to 3) := "0000";
 			  ir : out STD_LOGIC_VECTOR (0 to 4) := "00000";
 			  mar : out STD_LOGIC_VECTOR (0 to 2) := "000";
 			  mbr : out STD_LOGIC_VECTOR (0 to 2) := "000";
@@ -103,6 +103,7 @@ component program_counter is
            rst : in  STD_LOGIC;
 			  rw : in STD_LOGIC;
 			  inc : in STD_LOGIC;
+			  jmp : in STD_LOGIC;
            din : in  STD_LOGIC_VECTOR (7 downto 0);
            dout : out  STD_LOGIC_VECTOR (7 downto 0));
 end component;
@@ -165,16 +166,16 @@ end component;
 component program_status_word is
     Port ( clk : in STD_LOGIC;
 			  rst : in STD_LOGIC;
-			  c : in  STD_LOGIC;
            z : in  STD_LOGIC;
+			  c : in  STD_LOGIC;
            o : in  STD_LOGIC;
            r : in  STD_LOGIC;
            h : in  STD_LOGIC;
            psw : out  STD_LOGIC_VECTOR (0 to 4) := "00000");
 end component;
 
-signal cb_pc, cb_mar, cb_mbr, cb_acc, cb_ram, cb_regs, cb_alua, cb_alub, cb_out, cb_psw_cu, cb_psw_alu : STD_LOGIC_VECTOR (0 to 2) := "000";
-signal cb_alu : STD_LOGIC_VECTOR (0 to 3) := "0000";
+signal cb_mar, cb_mbr, cb_acc, cb_ram, cb_regs, cb_alua, cb_alub, cb_out, cb_psw_cu, cb_psw_alu : STD_LOGIC_VECTOR (0 to 2) := "000";
+signal cb_alu, cb_pc : STD_LOGIC_VECTOR (0 to 3) := "0000";
 signal cb_ir : STD_LOGIC_VECTOR (0 to 4) := "00000";
 signal psw_out : STD_LOGIC_VECTOR (0 to 4) := "00000"; -- Zero-Carry-Overflow-Reset-Halt
 
@@ -209,7 +210,7 @@ begin
 	mar: common_register port map(cb_mar(1), rst, addr_bus, mar_out);
 	mbr: common_register port map(cb_mbr(1), rst, data_bus, mbr_out);
 	ir: instruction_register port map(cb_ir(0), rst, cb_ir(1), cb_ir(2 to 3), data_bus, ir_out);
-	pc: program_counter port map(cb_pc(0), rst, cb_pc(1), cb_pc(2), addr_bus, pc_out);
+	pc: program_counter port map(cb_pc(0), rst, cb_pc(1), cb_pc(2), cb_pc(3), addr_bus, pc_out);
 	
 	alu_a: common_register port map(cb_alua(1), rst, data_bus, alua_out);
 	alu_b: common_register port map(cb_alub(1), rst, data_bus, alub_out);

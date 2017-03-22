@@ -35,16 +35,20 @@ entity program_counter is
            rst : in  STD_LOGIC;
 			  rw : in STD_LOGIC;
 			  inc : in STD_LOGIC;
+			  jmp : in STD_LOGIC;
            din : in  STD_LOGIC_VECTOR (7 downto 0);
            dout : out  STD_LOGIC_VECTOR (7 downto 0));
 end program_counter;
 
 architecture Behavioral of program_counter is
 
-signal counter : unsigned (7 downto 0) := x"64";
+signal counter, base : unsigned (7 downto 0) := x"64";
+signal scale : unsigned (7 downto 0) := "00000011";
 
 begin
-	process (clk, rst, rw, inc)
+	process (clk, rst, rw, inc, jmp, din)
+		variable tmp_mult: unsigned (15 downto 0) := x"0000";
+		variable tmp_add: unsigned (7 downto 0) := x"00";
 	begin
 		if (rst = '1') then
 			counter <= x"64";
@@ -52,6 +56,10 @@ begin
 		elsif (clk = '1') then
 			if (inc = '1') then				
 				counter <= counter + 1;
+			elsif (jmp = '1') then
+				tmp_mult := unsigned(din) * scale;
+				tmp_add := tmp_mult(7 downto 0) + base;
+				counter <= tmp_add;
 			elsif (rw = '1') then
 				counter <= unsigned(din);
 			end if;

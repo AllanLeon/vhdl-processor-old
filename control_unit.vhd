@@ -34,7 +34,7 @@ entity control_unit is
 			  rst : in STD_LOGIC;
 			  inst : in  STD_LOGIC_VECTOR (23 downto 0);
 			  psw : in STD_LOGIC_VECTOR (0 to 4);
-			  pc : out STD_LOGIC_VECTOR (0 to 2) := "000"; -- (enable, rw, increment)
+			  pc : out STD_LOGIC_VECTOR (0 to 3) := "0000";
 			  ir : out STD_LOGIC_VECTOR (0 to 4) := "00000";
 			  mar : out STD_LOGIC_VECTOR (0 to 2) := "000";
 			  mbr : out STD_LOGIC_VECTOR (0 to 2) := "000";
@@ -62,6 +62,7 @@ type state is (fetch_ins_1, fetch_ins_2, fetch_ins_3, fetch_ins_4, fetch_ins_5, 
 					cmp_reg_1, cmp_reg_2, cmp_reg_3, cmp_reg_4, cmp_reg_5, cmp_reg_6,
 					cmp_mem_1, cmp_mem_2, cmp_mem_3, cmp_mem_4, cmp_mem_5, cmp_mem_6,
 					not_1, not_2, not_3, not_4, not_5,
+					jmp, ja, jae, jb, jbe, je, jne,
 					stop, reset);
 signal current_state, next_state: state;
 
@@ -78,7 +79,7 @@ begin
 	
 	process (current_state)
 	begin
-		pc <= "000";
+		pc <= "0000";
 		ir <= "00000";
 		mar <= "000";
 		mbr <= "000";
@@ -212,6 +213,20 @@ begin
 						next_state <= cmp_reg_1;
 					when "010111" => -- COMPARE from memory
 						next_state <= cmp_mem_1;
+					when "011000" => -- inconditional JUMP
+						next_state <= jmp;
+					when "011010" => -- JUMP >
+						next_state <= ja;
+					when "011011" => -- JUMP >=
+						next_state <= jae;
+					when "011100" => -- JUMP <
+						next_state <= jb;
+					when "011101" => -- JUMP <=
+						next_state <= jbe;
+					when "011110" => -- JUMP =
+						next_state <= je;
+					when "011111" => -- JUMP !=
+						next_state <= jne;
 					
 					when others =>
 						next_state <= fetch_ins_1;
@@ -1145,6 +1160,93 @@ begin
 
 
 
+-------------------------------------- JMP -----------------------------------------
+			when jmp =>
+				ir(0) <= '1';
+				ir(1) <= '0';
+				ir(2 to 3) <= "01";
+				ir(4) <= '1';
+				
+				pc <= "1101";
+				
+				next_state <= fetch_ins_1;
+				
+			when ja =>
+				if (psw(0) = '0' and psw(1) = '0') then
+					ir(0) <= '1';
+					ir(1) <= '0';
+					ir(2 to 3) <= "01";
+					ir(4) <= '1';
+					
+					pc <= "1101";
+				end if;
+				
+				next_state <= fetch_ins_1;
+			
+			when jae =>
+				if (psw(1) = '0') then
+					ir(0) <= '1';
+					ir(1) <= '0';
+					ir(2 to 3) <= "01";
+					ir(4) <= '1';
+					
+					pc <= "1101";
+				end if;
+				
+				next_state <= fetch_ins_1;	
+			
+			when jb =>
+				if (psw(1) = '1') then
+					ir(0) <= '1';
+					ir(1) <= '0';
+					ir(2 to 3) <= "01";
+					ir(4) <= '1';
+					
+					pc <= "1101";
+				end if;
+				
+				next_state <= fetch_ins_1;	
+			
+			when jbe =>
+				if (psw(0) = '1' and psw(1) = '1') then
+					ir(0) <= '1';
+					ir(1) <= '0';
+					ir(2 to 3) <= "01";
+					ir(4) <= '1';
+					
+					pc <= "1101";
+				end if;
+				
+				next_state <= fetch_ins_1;
+			
+			when je =>
+				if (psw(0) = '1') then
+					ir(0) <= '1';
+					ir(1) <= '0';
+					ir(2 to 3) <= "01";
+					ir(4) <= '1';
+					
+					pc <= "1101";
+				end if;
+				
+				next_state <= fetch_ins_1;
+			
+			when jne =>
+				if (psw(0) = '0') then
+					ir(0) <= '1';
+					ir(1) <= '0';
+					ir(2 to 3) <= "01";
+					ir(4) <= '1';
+					
+					pc <= "1101";
+				end if;
+				
+				next_state <= fetch_ins_1;
+			
+			
+			
+				
+				
 			when reset =>
 				cb_psw <= "110";
 				next_state <= fetch_ins_1;

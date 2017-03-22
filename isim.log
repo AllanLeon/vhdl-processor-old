@@ -11,6 +11,15 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+at 705 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 735 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 765 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 815 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 845 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 875 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 925 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 955 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 985 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -19,6 +28,15 @@ This is a Lite version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+at 705 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 735 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 765 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 815 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 845 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 875 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 925 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 955 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 985 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -27,183 +45,15 @@ This is a Lite version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ERROR: at 95 ns(10000): Iteration limit 10000 is reached. Possible zero delay oscillation detected where simulation can not advance in time because signals can not resolve to a stable value in File "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/program_status_word.vhd" Line 52. Please correct this code in order to advance past the current simulation time.
-
-INFO: Simulator is stopped.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ERROR: at 95 ns(10000): Iteration limit 10000 is reached. Possible zero delay oscillation detected where simulation can not advance in time because signals can not resolve to a stable value in File "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/program_status_word.vhd" Line 56. Please correct this code in order to advance past the current simulation time.
-
-INFO: Simulator is stopped.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ERROR: at 95 ns(10000): Iteration limit 10000 is reached. Possible zero delay oscillation detected where simulation can not advance in time because signals can not resolve to a stable value in File "D:/UPB/9no Semestre/Arquitectura y tecnologia de procesadores/VHDL/Processor/program_status_word.vhd" Line 56. Please correct this code in order to advance past the current simulation time.
-
-INFO: Simulator is stopped.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
+at 705 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 735 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 765 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 815 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 845 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 875 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 925 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 955 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 985 ns(3), Instance /main_test/uut/ram/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.

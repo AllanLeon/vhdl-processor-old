@@ -32,8 +32,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity program_status_word is
     Port ( clk : in STD_LOGIC;
 			  rst : in STD_LOGIC;
-			  c : in  STD_LOGIC;
            z : in  STD_LOGIC;
+			  c : in  STD_LOGIC;
            o : in  STD_LOGIC;
            r : in  STD_LOGIC;
            h : in  STD_LOGIC;
@@ -44,14 +44,14 @@ architecture Behavioral of program_status_word is
 
 begin
 	--process (clk, rst, c, z, o, r, h)
-	process (rst, c, z, o, r, h)
+	process (rst, z, c, o, r, h)
 	begin
 		if (rst = '1') then
 			psw <= "00000";
 		else
 		--elsif (clk = '1') then
-			psw(0) <= c;
-			psw(1) <= z;
+			psw(0) <= z;
+			psw(1) <= c;
 			psw(2) <= o;
 			psw(3) <= r;
 			psw(4) <= h;
